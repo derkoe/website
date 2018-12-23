@@ -20,24 +20,7 @@ const throttle = (callback, limit) => {
  * Functions
  */
 
-// Auto Hide Header
-//
-let lastScrollPosition = window.pageYOffset;
-let header = document.getElementById('site-header');
-
-const autoHideHeader = () => {
-  let currentScrollPosition = window.pageYOffset;
-  if (currentScrollPosition > lastScrollPosition) {
-    header.classList.remove('slideInUp');
-    header.classList.add('slideOutDown');
-  } else {
-    header.classList.remove('slideOutDown');
-    header.classList.add('slideInUp');
-  }
-  lastScrollPosition = currentScrollPosition;
-}
-
-// Mobile Menu Toggle
+ // Mobile Menu Toggle
 //
 let mobileMenu = document.getElementById('mobile-menu');
 let mobileMenuVisible = false;
@@ -67,10 +50,9 @@ const showContent = () => {
 
 if (haveHeader == true) {
   document.getElementById('menu-btn').addEventListener('click', mobileMenuToggle);
-  
+
   window.addEventListener('scroll', throttle(() => {
-    autoHideHeader();
-    
+
     if (mobileMenuVisible == true) {
       mobileMenuToggle();
     }

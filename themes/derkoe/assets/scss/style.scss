@@ -245,8 +245,8 @@ table {
 
 #mobile-menu {
   position: fixed;
-  bottom: 4.8em;
-  right: 1.5em;
+  bottom: 3.5em;
+  right: 0;
   padding: .6em 1.8em;
   z-index: 1;
   box-sizing: border-box;
@@ -740,7 +740,4 @@ hr.post-end {
     width: 60%;
   }
 
-  #mobile-menu {
-    right: 1.2em;
-  }
 }
