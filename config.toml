@@ -1,0 +1,27 @@
+baseURL = "https://derkoe.github.io/"
+languageCode = "en-us"
+title = "derkoe"
+theme = "derkoe"
+
+[author]
+  name = "Christian Köberl"
+
+disableKinds = ["RSS"]
+
+[params]
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/derkoe"
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/derkoe"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    name = "Talks"
+    url = "/talks/"
+    weight = 20
