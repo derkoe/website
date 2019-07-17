@@ -1,4 +1,25 @@
 ---
 label: Blog post
-hide_body: true
-fields: []
+hide_body: false
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: date
+  type: datetime
+  label: Datum
+  description: ''
+  config:
+    required: true
+    date_format: DD.MM.YYY
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DD
+  default: now
+- name: categories
+  type: tag_list
+  default: []
+  label: Kategorien
