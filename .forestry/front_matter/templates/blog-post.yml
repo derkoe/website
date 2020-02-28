@@ -23,3 +23,5 @@ fields:
   type: tag_list
   default: []
   label: Kategorien
+pages:
+- content/setting-up-an-aks-cluster.md
