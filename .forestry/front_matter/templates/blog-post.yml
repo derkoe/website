@@ -24,4 +24,5 @@ fields:
   default: []
   label: Kategorien
 pages:
+- content/development-environment-in-wsl2.md
 - content/setting-up-an-aks-cluster.md
