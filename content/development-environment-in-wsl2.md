@@ -47,11 +47,11 @@ Then install packages you need for your development - in my case it is Java 11, 
 
 Currently there is no support for GUI apps for WSL - Microsoft has [announced that they are working on GUI support using Wayland](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/#wsl-gui) and that it should ship in 2020. So you have to use X11 forwarding or other tricks to enable this - I have tried all of them and there are some issues with any of the solutions:
 
-1. X11 server on Windows ([VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [X410](https://x410.dev/)) and setting the DISPLAY variable in Linux (`export DISPLAY=``ip route show | grep 'default via' | awk '{print $3}'``:0.0`).
+1. X11 server on Windows ([VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [X410](https://x410.dev/)) and setting the DISPLAY variable in Linux (`export DISPLAY=``ip route show | grep 'default via' | awk '{print $3}'``:0.0` in your `.bashrc`).
    * Works quite well - good performance, shortcuts work, even mouse back/forward buttons work as expected
-   * The main problem is that when you go to standby or hibernate the [connection between Windows and WSL breaks](https://superuser.com/questions/1474559/wsl2-x11-programs-disappear) and all your apps stop.
+   * The main problem is that when you go to standby or hibernate the [connection between Windows and WSL breaks](https://superuser.com/questions/1474559/wsl2-x11-programs-disappear) and all your apps stop. If you can live with that  go with this solution!
 2. Running [xrdp](http://xrdp.org/) on Linux and using Remote Desktop to connect
-   * In this case you are running a full desktop - that means you have to install Xfce (Gnome does not seem to work). 
+   * In this case you are running a full desktop - that means you have to install Xfce (Gnome does not seem to work).
    * With this solution the whole UI feels a bit laggy and slow - I tried to tune the xrdp params without success.
 3. [Xpra](http://xpra.org/) - a virtual X11 server to connect via a client on Windows (or other platforms)
    * The solution works but there are many issues like crashes, window positions are completely wrong, extra mouse buttons do not work, etc.
@@ -60,7 +60,31 @@ Currently there is no support for GUI apps for WSL - Microsoft has [announced th
    * As with plain X11: good performance, shortcuts work, even mouse back/forward buttons work as expected, plus the reconnect feature
    * The only drawback is the quirky Windows client
 
-### Setup for X2Go 
+### X2Go
+
+#### Inital setup
+
+1. Fix SSH host keys
+
+       sudo apt-get remove --purge openssh-server
+       sudo apt-get install openssh-server
+       sudo service ssh --full-restart
+2. Install X2Go on your Linux distribution
+
+       apt install x2goserver x2goserver-xsession
+3. [Download](http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe) and install the client for Windows.
+4. Configure the 
+   * Host: localhost
+   * Login: <your user>
+   * Session type: Published Applications
+
+#### After each WSL/Windows restart
+
+1. Launch ssh in Linux (if not started yet): `sudo service ssh start`
+2. Launch "X2Go Client" on Windows ad connect to the server with user/password
+3. Now you can launch X11 apps via the tray icon (see [X2Go Published Applications](https://wiki.x2go.org/doku.php/wiki:advanced:published-applications))
+
+## Open Issues
 
 ## Resources
 
