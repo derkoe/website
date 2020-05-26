@@ -62,7 +62,9 @@ Currently there is no support for GUI apps for WSL - Microsoft has [announced th
 
 ### X2Go
 
-#### Inital setup
+Here is the X2Go setup in more details (since it worked best for me).
+
+#### Initial setup
 
 1. Fix SSH host keys
 
