@@ -1,0 +1,124 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  max-width: 70em;
+  line-height: 1.4em;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 1rem;
+}
+pre {
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  padding: 1em;
+}
+h1 {
+  font-size: xx-large;
+}
+
+a.title {
+  text-decoration: none;
+}
+a.title:hover {
+  text-decoration: underline;
+}
+
+.post img {
+  float: right;
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.home-center {
+  margin: auto;
+  width: 15rem;
+}
+.home-center img {
+  width: 15rem;
+}
+.home-social {
+  text-align: center;
+  width: 15rem;
+}
+.home-social a {
+  color: black;
+}
+.logo {
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem;
+}
+
+/**
+ Main menu
+*/
+
+.home-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  white-space: nowrap;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  background: #111;
+  font-size: larger;
+}
+.home-menu ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+}
+.home-menu ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.home-menu a {
+  color: white;
+  text-decoration: none;
+}
+.home-menu .menu-heading {
+  color: white;
+  font-weight: 400;
+  font-size: 120%;
+  font-family: 'Pacifico', cursive;
+}
+.home-menu .menu-selected a {
+  color: white;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: none;
+  border: none;
+  color: #AECFE5;
+}
+
+/**
+ Content
+*/
+
+main {
+  margin-top: 5rem;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+  body {
+      font-size: 16px;
+  }
+  .home-menu {
+      text-align: left;
+  }
+  .home-menu ul {
+      float: right;
+  }
+}

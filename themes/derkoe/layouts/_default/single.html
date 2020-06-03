@@ -1,22 +1,13 @@
-{{ define "header" }}
-{{ partialCached "header.html" . }}
-{{ end }}
+{{ define "head" }}
 
+{{ end }}
+{{ define "title" }}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
 {{ define "main" }}
-	<main class="site-main section-inner thin animated fadeIn faster">
-		<h1>{{ .Title }}</h1>
-		<div class="content">
-			{{ .Content }}
-		</div>
-		{{- if and .Params.comments .Site.DisqusShortname }}
-		<div id="disqus" class="thin">
-			{{ template "_internal/disqus.html" . }}
-		</div>
-		{{- end }}
-	</main>
-{{ end }}
+<article class="container mt-4 post">
+    <h1>{{ .Title }}</h1>
 
-{{ define "footer" }}
-{{ partialCached "footer.html" . }}
-	<script>let haveHeader = true;</script>
+    {{ .Content }}
+</article>
 {{ end }}

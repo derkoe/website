@@ -1,6 +1,6 @@
 baseURL = "https://derkoe.github.io/"
 languageCode = "en-us"
-title = "derkoe"
+title = "Christian Köberl"
 theme = "derkoe"
 
 [author]

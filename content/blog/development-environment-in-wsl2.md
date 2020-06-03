@@ -1,13 +1,17 @@
-+++
-categories = []
-date = 2020-05-25T00:00:00Z
-draft = true
-title = "Development Environment in WSL2"
-
-+++
-# Development Environment in WSL2
+---
+categories: ["WSL"]
+tags: ["linux", "windows", "wsl"]
+date: "2020-05-25"
+title: "Development Environment in WSL2"
+image: "/Linux-vs-windows.jpg"
+author: Christian Köberl
+---
 
 This guide shows how to setup a full development environment including UI apps (X11) in WSL2 on Windows 10. WSL2 enables a "full" Linux development environment in Windows.
+
+<!--more-->
+
+This article is still a work in progress - unfinished sections are marked with TODO.
 
 ## Why?
 
@@ -20,13 +24,15 @@ For WSL2 to work you will need a Windows 10 build 19041 (aka 20H1) or higher (an
 **TL;DR:**
 
 1. Enable the features WSL and VM-Platform in Powershell as Admin:
-
-       dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-       dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   ```cmd
+   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   ```
 2. Restart Windows
 3. Set WSL2 as default:
-
-       wsl --set-default-version 2
+   ```cmd
+   wsl --set-default-version 2
+   ```
 4. Go to the Microsoft Store and install "Ubuntu"
 5. Launch Ubuntu from Start menu (this will ask you for a user account)
 
@@ -34,16 +40,26 @@ You can now re-launch a shell in your Ubuntu instance with "Ubuntu" from the Sta
 
 ## Update and Install Software
 
-Inside your Ubuntu update all packages:
+Inside your Ubuntu Linux update all packages:
 
-    sudo apt update
-    sudo apt upgrade
+```bash
+sudo apt update
+sudo apt upgrade
+```
 
 Then install packages you need for your development - in my case it is Java 11, Maven, Node.js/NPM and git:
 
-    sudo apt install openjdk-11-jdk openjdk-11-source maven nodejs npm git
+```bash
+sudo apt install openjdk-11-jdk openjdk-11-source maven nodejs npm git
+```
 
-## GUI Apps (X11/Wayland)
+Do not install Docker CLI or Docker Compose because these are provided by Docker Desktop (see next section).
+
+## Install Docker (optional)
+
+Most developers need Docker for their local setup - the newest Docker Desktop version supports WSL2 out of the box (even on Windows Home).
+
+## GUI Apps
 
 Currently there is no support for GUI apps for WSL - Microsoft has [announced that they are working on GUI support using Wayland](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/#wsl-gui) and that it should ship in 2020. So you have to use X11 forwarding or other tricks to enable this - I have tried all of them and there are some issues with any of the solutions:
 
@@ -58,7 +74,7 @@ Currently there is no support for GUI apps for WSL - Microsoft has [announced th
 4. [X2Go](https://wiki.x2go.org/) - also a virtual X11 server with an Windows client
    * This seems to be the most promising solution
    * As with plain X11: good performance, shortcuts work, even mouse back/forward buttons work as expected, plus the reconnect feature
-   * The only drawback is the quirky Windows client
+   * The only drawback is the quirky Windows client (but I got used to it)
 
 ### X2Go
 
@@ -67,17 +83,22 @@ Here is the X2Go setup in more details (since it worked best for me).
 #### Initial setup
 
 1. Fix SSH host keys
+   ```bash
+   sudo apt-get remove --purge openssh-server
+   sudo apt-get install openssh-server
+   sudo service ssh --full-restart
+   ```
 
-       sudo apt-get remove --purge openssh-server
-       sudo apt-get install openssh-server
-       sudo service ssh --full-restart
 2. Install X2Go on your Linux distribution
+   ```bash
+   apt install x2goserver
+   ```
 
-       apt install x2goserver x2goserver-xsession
 3. [Download](http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe) and install the client for Windows.
+
 4. Configure the 
-   * Host: localhost
-   * Login: <your user>
+   * Host: `localhost`
+   * Login: `<your user>`
    * Session type: Published Applications
 
 #### After each WSL/Windows restart
@@ -86,7 +107,13 @@ Here is the X2Go setup in more details (since it worked best for me).
 2. Launch "X2Go Client" on Windows ad connect to the server with user/password
 3. Now you can launch X11 apps via the tray icon (see [X2Go Published Applications](https://wiki.x2go.org/doku.php/wiki:advanced:published-applications))
 
+## Install IntelliJ IDEA
+
+TODO
+
 ## Open Issues
+
+TODO
 
 ## Resources
 
