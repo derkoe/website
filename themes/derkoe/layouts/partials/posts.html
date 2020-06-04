@@ -11,7 +11,7 @@
         <img src="{{ .Params.image | relURL }}">
     </a>
     {{ end }}
-    <a class="title" href="{{ .Permalink }}">
+    <a class="title" href="{{ .RelPermalink }}">
       <h2>{{ .Title }}</h2>
     </a>
     {{ partial "post-meta" . }}
@@ -19,7 +19,7 @@
       {{ .Summary }}
     </div>
     <div>
-      <a href="{{ .Permalink }}" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+      <a href="{{ .RelPermalink }}" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
     </div>
   </article>
   {{ end }}

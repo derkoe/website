@@ -1,6 +1,6 @@
 <header>
   <nav class="home-menu">
-    <a href="{{ .Site.BaseURL }}" class="menu-heading">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL | relURL }}" class="menu-heading">{{ .Site.Title }}</a>
     <ul>
       {{- range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
