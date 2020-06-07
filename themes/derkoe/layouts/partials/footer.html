@@ -1,0 +1,6 @@
+<footer>
+  Copyright &copy; 2020 Christian Köberl
+  {{- with .Site.Params.social }}
+    {{ partialCached "social-icons.html" . }}
+  {{- end }}
+</footer>

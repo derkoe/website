@@ -8,7 +8,7 @@
   <article class="post">
     {{ if .Params.image }}
     <a href="{{ .RelPermalink }}">
-        <img src="{{ .Params.image | relURL }}">
+        <img class="post-image" src="{{ .Params.image | relURL }}">
     </a>
     {{ end }}
     <a class="title" href="{{ .RelPermalink }}">

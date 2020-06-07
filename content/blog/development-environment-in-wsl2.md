@@ -11,8 +11,6 @@ This guide shows how to setup a full development environment including UI apps (
 
 <!--more-->
 
-This article is still a work in progress - unfinished sections are marked with TODO.
-
 ## Why?
 
 The first thing you might ask is: why? First, we have to run Windows on our machines - so the all-in Linux does not work. Second, Linux is a lot faster for building software than Windows - our biggest app compiles in 13 minutes under Windows and in just 2 minutes under WSL on my machine which is a massive improvement.
@@ -107,13 +105,49 @@ Here is the X2Go setup in more details (since it worked best for me).
 2. Launch "X2Go Client" on Windows ad connect to the server with user/password
 3. Now you can launch X11 apps via the tray icon (see [X2Go Published Applications](https://wiki.x2go.org/doku.php/wiki:advanced:published-applications))
 
-## Install IntelliJ IDEA
+## Editors/IDEs
 
-TODO
+### Visual Studio Code
+
+Simply install VSCode and then you can open it from the Linux shell with `code` or `code <path>` - most of the time it will be:
+```bash
+code .
+```
+
+### IntelliJ IDEA
+
+On a normal Ubuntu you could install [IntelliJ IDEA via Snap](https://snapcraft.io/search?q=intellij) but Snap does not work on WSL2 (there is [a hacky workaround](https://discourse.ubuntu.com/t/using-snapd-in-wsl2/12113)).
+
+So, the easiest way is to install it manually:
+
+1. Get the latest tar.gz from [the downloads page](https://www.jetbrains.com/idea/download/index.html#section=linux)
+2. Extract it an create a symlink (so you can easily switch versions):
+   ```bash
+   cd /opt
+   sudo tar xzf /mnt/c/Users/$USER/Downloads/idea-{edition-version}.tar.gz
+   sudo ln -s /opt/idea-{edition-version} /opt/idea
+   ```
+3. To easily launch the app via the X2Go context menu create an app desktop entry `/usr/share/applications/intellij-idea.desktop` with the following contents:
+   ```ini
+   [Desktop Entry]
+   Name=Intellij IDEA
+   Comment=JetBrains Intellij IDEA Java IDE
+   Categories=Development
+   Keywords=java;ide
+   Exec=/opt/idea/bin/idea.sh
+   Type=Application
+   Icon=/opt/idea/bin/idea.png
+   ```
 
 ## Open Issues
 
-TODO
+There are still many issues with WSL2 - the biggest problems are:
+
+* Systemd is not running - the official issue is [Blockers for systemd?](https://github.com/microsoft/WSL/issues/994). Seems like Microsoft is working with the Systemd team on this problem. Anyway withoud Systemd you cannot run any services and things like Snap packages do not work. There are some workarounds like [genie](https://github.com/arkane-systems/genie) or [this instructions](https://forum.snapcraft.io/t/running-snaps-on-wsl2-insiders-only-for-now/13033).
+
+* GUI apps are a pain (in the a..) - like alrady [mentioned above](#gui-apps).
+
+* There are many troubles with VPN solutions: [CISCO AnyConnect](https://github.com/microsoft/WSL/issues/4277), [Checkpoint VPN](https://github.com/microsoft/WSL/issues/4246).
 
 ## Resources
 
