@@ -1,29 +1,27 @@
-<section>
-  {{ $pages := .Pages }}
-  {{ if .IsHome }}
-  {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ end }}
+{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) 10 }}
+{{ range $paginator.Pages }}
+<article class="post">
+  {{ if .Params.image }}
+  <a href="{{ .RelPermalink }}">
+      <img class="post-image" src="{{ .Params.image | relURL }}" alt="">
+  </a>
   {{ end }}
-  {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) 10 }}
-  {{ range $paginator.Pages }}
-  <article class="post">
-    {{ if .Params.image }}
-    <a href="{{ .RelPermalink }}">
-        <img class="post-image" src="{{ .Params.image | relURL }}">
-    </a>
-    {{ end }}
-    <a class="title" href="{{ .RelPermalink }}">
-      <h2>{{ .Title }}</h2>
-    </a>
-    {{ partial "post-meta" . }}
-    <div>
-      {{ .Summary }}
-    </div>
-    <div>
-      <a href="{{ .RelPermalink }}" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-    </div>
-  </article>
-  {{ end }}
+  <a class="title" href="{{ .RelPermalink }}">
+    <h2>{{ .Title }}</h2>
+  </a>
+  {{ partial "post-meta" . }}
   <div>
-    {{ template "_internal/pagination.html" . }}
+    <p>{{ .Summary | plainify }}</p>
   </div>
-</section>
+  <div>
+    <a href="{{ .RelPermalink }}" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+  </div>
+</article>
+{{ end }}
+<div>
+  {{ template "_internal/pagination.html" . }}
+</div>
