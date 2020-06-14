@@ -22,6 +22,13 @@ h1 {
   font-size: xx-large;
   line-height: normal;
 }
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  padding: .5rem;
+  border: 1px solid black;
+}
 
 a.title {
   text-decoration: none;
