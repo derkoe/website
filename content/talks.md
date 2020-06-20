@@ -1,6 +1,5 @@
 ---
 title: "Talks"
-date: 2018-12-22T13:11:22+01:00
 ---
 
 - Typescript - the Better JavaScript?  
