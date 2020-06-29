@@ -1,6 +1,6 @@
 ---
 tags: ["java", "linux"]
-date: "2020-06-15"
+date: "2020-06-29"
 title: "Beating C with 33 Lines of Java"
 author: Christian Köberl
 summary: Writing a faster word count (wc) in Java.
