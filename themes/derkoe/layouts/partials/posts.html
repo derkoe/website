@@ -14,12 +14,9 @@
   <a class="title" href="{{ .RelPermalink }}">
     <h2>{{ .Title }}</h2>
   </a>
-  {{ partial "post-meta" . }}
+  <div>{{- .Date.Format "Jan 2, 2006" -}}</div>
   <div>
     <p>{{ .Summary }}</p>
-  </div>
-  <div>
-    <a href="{{ .RelPermalink }}" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
   </div>
 </article>
 {{ end }}

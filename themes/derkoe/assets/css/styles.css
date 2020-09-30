@@ -45,6 +45,10 @@ a.title:hover {
   text-decoration: underline;
 }
 
+.post {
+  margin-top: 2.5rem;
+}
+
 img.post-image {
   float: right;
   width: 20%;
@@ -107,7 +111,7 @@ img.post-image {
 }
 
 main {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 2rem;
   line-height: 1.5em;
 }
