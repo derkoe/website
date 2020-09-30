@@ -6,13 +6,13 @@
 
 body {
   margin: auto;
-  max-width: 70em;
-  line-height: 1.4em;
-  font-family: 'Open Sans', sans-serif;
+  max-width: 50rem;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 16px;
   padding: 1rem;
 }
 pre {
-  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  font-family: "Consolas", "Courier New", Courier, monospace;
   padding: 1em;
   max-width: 100%;
   overflow: auto;
@@ -21,14 +21,23 @@ h1 {
   font-size: xx-large;
   line-height: normal;
 }
+h1,
+h2,
+h3 h4 {
+  font-family: Montserrat, sans-serif;
+}
 table {
   border-collapse: collapse;
 }
-table td, table th {
-  padding: .5rem;
+table td,
+table th {
+  padding: 0.5rem;
   border: 1px solid black;
 }
 
+a {
+  color: royalblue;
+}
 a.title {
   text-decoration: none;
 }
@@ -64,19 +73,15 @@ img.post-image {
 */
 
 .home-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
   height: 4rem;
   white-space: nowrap;
-  padding: 1.2rem 2rem;
-  text-align: center;
-  background: #111;
+  padding: 1.2rem 0.2rem;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
   font-size: larger;
 }
 .home-menu ul {
-  display: inline-block;
+  float: right;
   list-style: none;
   margin: 0;
 }
@@ -85,14 +90,11 @@ img.post-image {
   margin-right: 1rem;
 }
 .home-menu a {
-  color: white;
+  color: #111;
   text-decoration: none;
 }
 .home-menu .menu-heading {
-  color: white;
   font-weight: 400;
-  font-size: 120%;
-  font-family: 'Pacifico', cursive;
 }
 .home-menu .menu-selected a {
   color: white;
@@ -101,51 +103,29 @@ img.post-image {
 .home-menu li a:focus {
   background: none;
   border: none;
-  color: #AECFE5;
+  color: #aecfe5;
 }
 
-/**
- Content
-*/
-
 main {
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  line-height: 1.5em;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   text-align: center;
-  padding: .2rem;
-  background-color: #111;
-  color: white;
 }
 footer .logo {
   height: 1rem;
   width: 1rem;
-  margin: 0 .4rem;
-}
-.logo-github {
-  stroke: white;
-  fill: white;
+  margin: 0 0.4rem;
 }
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
- * On tablets and other medium-sized devices, we want to customize some
- * of the mobile styles.
  */
 @media (min-width: 48em) {
   body {
-      font-size: 16px;
-  }
-  .home-menu {
-      text-align: left;
-  }
-  .home-menu ul {
-      float: right;
+    font-size: 18px;
   }
 }

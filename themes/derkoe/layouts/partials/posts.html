@@ -1,5 +1,6 @@
 {{ $pages := .Pages }}
 {{ if .IsHome }}
+<h1>Blog</h1>
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ end }}
 {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) 10 }}
