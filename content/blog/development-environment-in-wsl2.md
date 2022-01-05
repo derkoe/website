@@ -92,7 +92,7 @@ Here is the X2Go setup in more details (since it worked best for me).
    apt install x2goserver
    ```
 
-3. [Download](http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe) and install the client for Windows.
+3. [Download](https://code.x2go.org/releases/) and install the client for Windows.
 
 4. Configure the 
    * Host: `localhost`
