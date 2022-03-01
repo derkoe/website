@@ -2,11 +2,13 @@
 title: "Talks"
 ---
 
-- Typescript - the Better JavaScript?  
-  We Are Developers, 2017  
+- SBOM + Security = Fun - CNCF Community Salzburg, 03/2022  
+  [Slides](/2022-sbom-syft-slides.pdf)
+
+- Typescript - the Better JavaScript? - We Are Developers, 2017  
   [Video](https://www.youtube.com/watch?v=XUhvFYdgzc0) | [Slides](https://derkoe.github.io/wad-typescript/)
 
-- Container Orchestration - Kubernetes and OpenShift  
+- Container Orchestration - Kubernetes and OpenShift
   Salzburg Web Dev Meetup, 2017  
   [Slides](https://speakerdeck.com/derkoe/container-orchestration-kubernetes-and-openshift)
 
