@@ -2,7 +2,10 @@
 title: "Talks"
 ---
 
-- SBOM + Security = Fun - CNCF Community Salzburg, 03/2022  
+- New Web Frameworks - Barcamp NextWeb Salzburg, 04/2022
+  [Slides](/2022-04-Web-Frameworks-Barcamp-Sbg.pdf)
+
+- SBOM + Security = Fun - CNCF Community Salzburg, 03/2022
   [Slides](/2022-sbom-syft-slides.pdf)
 
 - Typescript - the Better JavaScript? - We Are Developers, 2017  
