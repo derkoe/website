@@ -2,6 +2,9 @@
 title: "Talks"
 ---
 
+- Dependency Management and Supply Chain Security, Open Security Summit, 05/2022  
+  [Slides](/2022-05-Open-Security-Summit-Dependency-Management.pdf)
+
 - Java on Azure - Global Azure Austria, 05/2022  
   [Slides](/2022-05-java-azure.pdf)
 
