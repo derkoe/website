@@ -3,10 +3,10 @@ title: "Talks"
 ---
 
 - Dependency Management and Supply Chain Security, Open Security Summit, 05/2022  
-  [Slides](/2022-05-Open-Security-Summit-Dependency-Management.pdf)
+  [Video](https://www.youtube.com/watch?v=jQXv4_ClgCM) | [Slides](/2022-05-Open-Security-Summit-Dependency-Management.pdf)
 
 - Java on Azure - Global Azure Austria, 05/2022  
-  [Slides](/2022-05-java-azure.pdf)
+  [Video](https://www.youtube.com/watch?v=0YXPC0BXK2s) | [Slides](/2022-05-java-azure.pdf)
 
 - New Web Frameworks - Barcamp NextWeb Salzburg, 04/2022  
   [Slides](/2022-04-Web-Frameworks-Barcamp-Sbg.pdf)
