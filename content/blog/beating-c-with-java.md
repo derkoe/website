@@ -4,7 +4,7 @@ date: "2020-06-29"
 title: "Beating C with 33 Lines of Java"
 author: Christian Köberl
 summary: Writing a faster word count (wc) in Java and learing about the GraalVM.
-image: "/beating-c.png"
+image: "/beating-c-with-java.jpg"
 ---
 
 After reading the "Beating C with X lines of Y" [^1] last year I immediately thought about trying this in my go-to language: Java. Now you might ask: "Java? Isn't Java known to have a slow startup and heavy memory footprint?" But let's see how Java performs - especially with its latest incarnation [GraalVM](https://www.graalvm.org/).

@@ -1,0 +1,25 @@
+body nav {
+  border-bottom: 1px solid var(--muted-border-color);
+}
+img.me {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 10rem;
+}
+
+.switcher {
+  right: calc(var(--spacing) + var(--scrollbar-width, 0px));
+}
+.switcher {
+  position: fixed;
+  right: calc(var(--spacing) / 2 + var(--scrollbar-width, 0px));
+  bottom: var(--spacing);
+  width: auto;
+  margin-bottom: 0;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  box-shadow: var(--card-box-shadow);
+  line-height: 1;
+  text-align: right;
+}

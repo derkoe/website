@@ -18,16 +18,17 @@
   <link rel="mask-icon" href="{{"safari-pinned-tab.svg" | relURL}}" color="{{.Site.Params.themeColor}}">
   <link rel="shortcut icon" href="{{"favicon.ico" | relURL}}">
 
-  {{ $css := resources.Get "css/styles.css" }}
+  {{ $pico := resources.Get "css/pico.css" }}
+  {{ $custom := resources.Get "css/custom.css" }}
   {{ $syntax := resources.Get "css/syntax.css" }}
-  {{ $styles := slice $css $syntax | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
+  {{ $styles := slice $pico $custom $syntax | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ $styles.Permalink | relURL }}" integrity="{{ $styles.Data.Integrity }}">
 </head>
 
 <body>
   {{- partial "header.html" . -}}
-  <main>
+  <main class="container">
     {{- block "main" . }}{{- end }}
   </main>
   {{- partial "footer.html" . -}}

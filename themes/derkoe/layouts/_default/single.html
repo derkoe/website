@@ -5,10 +5,10 @@
   {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-<article class="post">
-    <h1>{{ .Title }}</h1>
-    {{ partial "post-meta" . }}
-
+<h1>{{ .Title }}</h1>
+<img src="{{ .Params.image | relURL }}" class="{{ .Params.imageClass }}" alt="">
+{{ partial "post-meta" . }}
+<article class="post {{ .Title }}">
     {{ .Content }}
 </article>
 {{ end }}

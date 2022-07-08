@@ -1,10 +1,14 @@
-<header>
-  <nav class="home-menu">
-    <a href="{{ .Site.BaseURL | relURL }}" class="menu-heading">{{ .Site.Title }}</a>
+  <nav class="container-fluid">
+    <ul>
+        <li>
+            <a href="{{ .Site.BaseURL | relURL }}" aria-label="Back home">
+              {{ .Site.Title }}
+            </a>
+        </li>
+    </ul>
     <ul>
       {{- range .Site.Menus.main }}
-      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}" class="secondary">{{ .Name }}</a></li>
       {{- end }}
     </ul>
   </nav>
-</header>
