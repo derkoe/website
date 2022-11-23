@@ -2,6 +2,9 @@
 title: "Talks"
 ---
 
+- Secure DevOps Environment, CNCF Linz, 11/2022  
+  [Slides](/2022-11-CNCF-Linz-Secure-DevOps-Environment.pdf) | [Renovate demo](https://github.com/derkoe/renovate-demo-cncf-linz-2022-11) | [SBOM Operator demo](https://github.com/derkoe/sbom-operator-demo-cncf-linz-2022-11)
+
 - Dependency Management and Supply Chain Security, Open Security Summit, 05/2022  
   [Video](https://www.youtube.com/watch?v=jQXv4_ClgCM) | [Slides](/2022-05-Open-Security-Summit-Dependency-Management.pdf)
 
