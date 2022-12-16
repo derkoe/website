@@ -12,9 +12,10 @@ I have a broad expertise from frontend development over backend engineering to o
 
 ## Online
 
-- [Twitter - derkoe](https://twitter.com/derkoe)
 - [GitHub - derkoe](https://github.com/derkoe)
-
+- [GitLab - derkoe](https://gitlab.com/derkoe)
+- [Mastodon - @mastodon.social@derkoe](https://mastodon.social/@derkoe)
+- [Twitter - derkoe](https://twitter.com/derkoe)
 
 ## Imprint
 

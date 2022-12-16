@@ -10,11 +10,17 @@ disableKinds = ["RSS"]
 
 [params]
   [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/derkoe"
-  [[params.social]]
     name = "github"
     url = "https://github.com/derkoe"
+  [[params.social]]
+    name = "gitlab"
+    url = "https://gitlab.com/derkoe"
+  [[params.social]]
+    name = "mastodon"
+    url = "https://mastodon.social/@derkoe"
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/derkoe"
 
 [menu]
   [[menu.main]]
