@@ -2,6 +2,9 @@
 title: "Talks"
 ---
 
+- Livin‘ On The (Cheap) Edge, Global Azure, 04/2023  
+  [Video](https://www.youtube.com/watch?v=XlT5_L_Gs3Q) | [Slides](2023-04-Global-Azure-Livin-on-the-Edge.pdf)
+
 - Secure DevOps Environment, CNCF Linz, 11/2022  
   [Slides](/2022-11-CNCF-Linz-Secure-DevOps-Environment.pdf) | [Renovate demo](https://github.com/derkoe/renovate-demo-cncf-linz-2022-11) | [SBOM Operator demo](https://github.com/derkoe/sbom-operator-demo-cncf-linz-2022-11)
 
