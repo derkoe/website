@@ -3,7 +3,7 @@ title: "Talks"
 ---
 
 - Supply Chain Security using Free and Open Tools, [KCD Austria](https://kcdaustria.at/), 09/2023  
-  [Slides](/2023-09-KCD-Austria-Supply-Chain-Security.pdf)
+  [Video](https://www.youtube.com/watch?v=gLlukjXOXP4) | [Slides](/2023-09-KCD-Austria-Supply-Chain-Security.pdf)
 
 - Livin‘ On The (Cheap) Edge, Global Azure, 04/2023  
   [Video](https://www.youtube.com/watch?v=XlT5_L_Gs3Q) | [Slides](/2023-04-Global-Azure-Livin-on-the-Edge.pdf)
